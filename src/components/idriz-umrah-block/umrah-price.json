@@ -1,0 +1,33 @@
+{
+  "collectionName": "components_idriz_umrah_block_umrah_prices",
+  "info": {
+    "displayName": "umrah-price"
+  },
+  "options": {},
+  "attributes": {
+    "value": {
+      "type": "integer",
+      "required": true
+    },
+    "isDiscounted": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "discounted_value": {
+      "type": "integer"
+    },
+    "room": {
+      "type": "enumeration",
+      "enum": [
+        "roomX2",
+        "roomX3",
+        "roomX4"
+      ]
+    },
+    "currency": {
+      "type": "string",
+      "default": "€"
+    }
+  }
+}
