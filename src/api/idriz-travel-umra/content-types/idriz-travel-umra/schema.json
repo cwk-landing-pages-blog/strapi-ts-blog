@@ -1,0 +1,33 @@
+{
+  "kind": "singleType",
+  "collectionName": "idriz_travel_umras",
+  "info": {
+    "singularName": "idriz-travel-umra",
+    "pluralName": "idriz-travel-umras",
+    "displayName": "Idriz Travel Umra",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "services": {
+      "displayName": "service-light",
+      "type": "component",
+      "repeatable": true,
+      "component": "business.service-light"
+    },
+    "testimonials": {
+      "type": "component",
+      "repeatable": true,
+      "component": "business.testimonial-item"
+    }
+  }
+}
