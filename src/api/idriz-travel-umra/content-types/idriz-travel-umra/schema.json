@@ -24,10 +24,11 @@
       "repeatable": true,
       "component": "business.service-light"
     },
-    "testimonials": {
+    "oferta": {
+      "displayName": "oferta",
       "type": "component",
-      "repeatable": true,
-      "component": "business.testimonial-item"
+      "repeatable": false,
+      "component": "business.oferta"
     }
   }
 }

@@ -1,0 +1,30 @@
+{
+  "collectionName": "components_business_ofertas",
+  "info": {
+    "displayName": "oferta"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "showOnPage": {
+      "type": "boolean",
+      "default": true,
+      "required": true
+    },
+    "images": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "subtitle": {
+      "type": "string"
+    }
+  }
+}
