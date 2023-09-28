@@ -94,14 +94,6 @@
         }
       }
     },
-    "capacity": {
-      "type": "integer",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
     "slug": {
       "pluginOptions": {
         "i18n": {
@@ -156,16 +148,27 @@
       "component": "shared.seo"
     },
     "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images"
       ],
-      "type": "media",
-      "multiple": false,
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
       }
+    },
+    "tags": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string",
+      "default": "ejaedhetineumre,umre,",
+      "required": true
     }
   }
 }

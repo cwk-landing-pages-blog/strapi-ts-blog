@@ -7,10 +7,12 @@
   "options": {},
   "attributes": {
     "meta_title": {
-      "type": "string"
+      "type": "string",
+      "maxLength": 60
     },
     "description": {
-      "type": "text"
+      "type": "text",
+      "maxLength": 160
     },
     "meta_img": {
       "type": "media",
@@ -21,7 +23,9 @@
       ]
     },
     "keywords": {
-      "type": "string"
+      "type": "string",
+      "regex": "[^,]+",
+      "maxLength": 165
     },
     "canonical_url": {
       "type": "string"
