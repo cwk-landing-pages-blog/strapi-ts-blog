@@ -2,13 +2,13 @@
  * `auth-cwk-user` middleware
  */
 
-import { Strapi } from '@strapi/strapi';
-import jwt_decode, { JwtPayload } from 'jwt-decode';
+import { Strapi } from "@strapi/strapi";
+import jwt_decode, { JwtPayload } from "jwt-decode";
 
 interface IJwtPayload extends JwtPayload {
-  email?:string,
-  name?:string,
-  picture?:string,
+  email?: string;
+  name?: string;
+  picture?: string;
 }
 
 export const checkToken = (token: string, date) => {
@@ -26,7 +26,7 @@ export const checkToken = (token: string, date) => {
   //     email: decoded.email,
   //   };
   // }
-  return decoded
+  return decoded;
 };
 
 export default (config, { strapi }: { strapi: Strapi }) => {
@@ -43,7 +43,7 @@ export default (config, { strapi }: { strapi: Strapi }) => {
           return (ctx.response.status = 401);
         }
       } catch (err) {
-        ctx.response.status = 401
+        ctx.response.status = 401;
         return (ctx.body = err);
       }
     } else {

@@ -1,0 +1,58 @@
+{
+  "kind": "collectionType",
+  "collectionName": "iktisat_accounts",
+  "info": {
+    "singularName": "iktisat-account",
+    "pluralName": "iktisat-accounts",
+    "displayName": "Iktisat Account",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "iktisat_profile": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::iktisat-profile.iktisat-profile",
+      "inversedBy": "iktisat_accounts"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "general",
+        "cash",
+        "currentAccount",
+        "creditCard",
+        "savingAccount",
+        "bonus",
+        "insurance",
+        "investment",
+        "loan",
+        "accountWithOverdraft"
+      ]
+    },
+    "name": {
+      "type": "string",
+      "required": true,
+      "maxLength": 50,
+      "minLength": 3
+    },
+    "currency": {
+      "type": "string",
+      "required": true,
+      "default": "EUR",
+      "maxLength": 3,
+      "minLength": 3
+    },
+    "color": {
+      "type": "string",
+      "required": true,
+      "default": "#4f46e5",
+      "maxLength": 7,
+      "minLength": 7,
+      "private": true
+    }
+  }
+}

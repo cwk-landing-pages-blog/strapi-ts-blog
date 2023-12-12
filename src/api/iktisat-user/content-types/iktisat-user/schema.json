@@ -1,0 +1,42 @@
+{
+  "kind": "collectionType",
+  "collectionName": "iktisat_users",
+  "info": {
+    "singularName": "iktisat-user",
+    "pluralName": "iktisat-users",
+    "displayName": "Iktisat User",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "email": {
+      "type": "email"
+    },
+    "isSoftDeleted": {
+      "type": "boolean",
+      "default": false
+    },
+    "full_name": {
+      "type": "string"
+    },
+    "img_url": {
+      "type": "string"
+    },
+    "iktisat_profile": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::iktisat-profile.iktisat-profile",
+      "mappedBy": "iktisat_user"
+    },
+    "stripe_customer_id": {
+      "type": "string",
+      "required": false
+    },
+    "subscription_id": {
+      "type": "string"
+    }
+  }
+}
