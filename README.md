@@ -38,3 +38,4 @@ Strapi gives you many possible deployment options for your project. Find the one
 
 images -AWS S3
 github + render
+

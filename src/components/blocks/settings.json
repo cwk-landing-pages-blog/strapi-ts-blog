@@ -49,14 +49,6 @@
     "isCarryOver": {
       "type": "boolean",
       "default": true
-    },
-    "pricing_plan": {
-      "type": "enumeration",
-      "enum": [
-        "free",
-        "gold",
-        "platinum"
-      ]
     }
   }
 }

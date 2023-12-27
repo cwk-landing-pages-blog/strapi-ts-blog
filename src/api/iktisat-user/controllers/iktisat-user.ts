@@ -64,6 +64,12 @@ export default factories.createCoreController(
             },
           }
         );
+        if (entry) {
+          ctx.response.status = 200;
+          return (ctx.body = {
+            message: "User Updated",
+          });
+        }
       }
       ctx.response.status = 401;
       return (ctx.body = {
@@ -76,7 +82,6 @@ export default factories.createCoreController(
       const timeNow = new Date().getTime();
 
       if (ctx.response && ctx.response.header) {
-        const stripe_customer_id = ctx.request.body;
         const token = ctx.request.header.authorization;
         const userData = checkToken(token, timeNow);
 
@@ -89,11 +94,27 @@ export default factories.createCoreController(
         // check if user already exists
         if (entry.length) {
           // user already exist in iktisat-users
-
-          ctx.body = {
-            user: entry[0],
-            message: "User already exists",
-          };
+          const currentProfile = await strapi.entityService.findMany(
+            "api::iktisat-profile.iktisat-profile",
+            {
+              filters: {
+                iktisat_user: entry[0].id,
+              },
+            }
+          );
+          if (currentProfile) {
+            ctx.body = {
+              user: entry[0],
+              profileId: currentProfile[0].id,
+              message: "User already exists",
+            };
+          } else {
+            ctx.body = {
+              user: entry[0],
+              profileId: null,
+              message: "User already exists",
+            };
+          }
           return entry[0];
         } else {
           const entry = await strapi.entityService.create(
@@ -106,10 +127,33 @@ export default factories.createCoreController(
               },
             }
           );
-          ctx.body = {
-            user: entry[0],
-            message: "User created",
-          };
+          console.log(
+            "🚀 ~ file: iktisat-user.ts:108 ~ authWithToken ~ entry:",
+            entry
+          );
+
+          // user created => create profile
+          const profile = await strapi.entityService.create(
+            "api::iktisat-profile.iktisat-profile",
+            {
+              data: {
+                iktisat_user: entry.id,
+              },
+            }
+          );
+          if (profile) {
+            ctx.body = {
+              user: entry[0],
+              message: "User created",
+              profileId: profile.id,
+            };
+          } else {
+            ctx.body = {
+              user: entry[0],
+              message: "User created",
+              profileId: null,
+            };
+          }
         }
       }
       ctx.response.status = 401;

@@ -1,0 +1,36 @@
+{
+  "collectionName": "components_idriz_umrah_block_ramadans",
+  "info": {
+    "displayName": "ramadan"
+  },
+  "options": {},
+  "attributes": {
+    "slogan": {
+      "type": "string"
+    },
+    "umrah_trips": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::umrah-trip.umrah-trip"
+    },
+    "ramadan_year": {
+      "type": "integer",
+      "min": 2024,
+      "required": true,
+      "default": 2024
+    },
+    "showNotification": {
+      "type": "boolean",
+      "default": true,
+      "required": true
+    },
+    "content": {
+      "type": "customField",
+      "options": {
+        "output": "HTML",
+        "preset": "light"
+      },
+      "customField": "plugin::ckeditor.CKEditor"
+    }
+  }
+}

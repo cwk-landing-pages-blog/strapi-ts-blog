@@ -34,9 +34,6 @@
     "stripe_customer_id": {
       "type": "string",
       "required": false
-    },
-    "subscription_id": {
-      "type": "string"
     }
   }
 }

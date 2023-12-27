@@ -21,12 +21,12 @@
     "isOnBoarded": {
       "type": "boolean",
       "default": false,
-      "required": true
+      "required": false
     },
     "isMarried": {
       "type": "boolean",
       "default": false,
-      "required": true
+      "required": false
     },
     "transaction": {
       "displayName": "transaction",

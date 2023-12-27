@@ -29,6 +29,12 @@
       "type": "component",
       "repeatable": false,
       "component": "business.oferta"
+    },
+    "umreRamadan": {
+      "displayName": "ramadan",
+      "type": "component",
+      "repeatable": true,
+      "component": "idriz-umrah-block.ramadan"
     }
   }
 }
