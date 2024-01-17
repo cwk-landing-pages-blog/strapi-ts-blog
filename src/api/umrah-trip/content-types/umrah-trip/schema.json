@@ -117,16 +117,6 @@
       "max": 3,
       "min": 1
     },
-    "umrah_hotels": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::umrah-hotel.umrah-hotel"
-    },
-    "umrah_tour_guides": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::umrah-tour-guide.umrah-tour-guide"
-    },
     "description": {
       "type": "component",
       "repeatable": false,
@@ -159,16 +149,6 @@
           "localized": true
         }
       }
-    },
-    "tags": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "type": "string",
-      "default": "ejaedhetineumre,umre,",
-      "required": true
     }
   }
 }

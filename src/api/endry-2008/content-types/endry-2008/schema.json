@@ -40,17 +40,6 @@
         }
       }
     },
-    "testimonials": {
-      "displayName": "testimonial_item",
-      "type": "component",
-      "repeatable": true,
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "component": "business.testimonial-item"
-    },
     "services": {
       "displayName": "service_item",
       "type": "component",

@@ -36,12 +36,6 @@
       "repeatable": true,
       "component": "idriz-umrah-block.ramadan"
     },
-    "media": {
-      "displayName": "media",
-      "type": "component",
-      "repeatable": false,
-      "component": "idriz-umrah-block.media"
-    },
     "info": {
       "displayName": "info",
       "type": "component",
