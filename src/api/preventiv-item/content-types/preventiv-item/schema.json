@@ -1,0 +1,51 @@
+{
+  "kind": "collectionType",
+  "collectionName": "preventiv_items",
+  "info": {
+    "singularName": "preventiv-item",
+    "pluralName": "preventiv-items",
+    "displayName": "preventiv-item"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "info": {
+      "type": "text"
+    },
+    "price": {
+      "type": "decimal"
+    },
+    "discounted_price": {
+      "type": "decimal"
+    },
+    "isDiscounted": {
+      "type": "boolean"
+    },
+    "quantity": {
+      "type": "decimal"
+    },
+    "unit": {
+      "type": "enumeration",
+      "enum": [
+        "square_meter",
+        "cubic_meter",
+        "piece",
+        "kg",
+        "lt",
+        "meter",
+        "linear-meter"
+      ]
+    },
+    "preventiv": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::preventiv.preventiv",
+      "inversedBy": "preventiv_items"
+    }
+  }
+}

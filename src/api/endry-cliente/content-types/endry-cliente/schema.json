@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "endry_clientes",
+  "info": {
+    "singularName": "endry-cliente",
+    "pluralName": "endry-clientes",
+    "displayName": "endry-cliente",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "surname": {
+      "type": "string"
+    },
+    "address": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    },
+    "tel": {
+      "type": "string"
+    },
+    "info": {
+      "type": "text"
+    },
+    "preventivs": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::preventiv.preventiv",
+      "inversedBy": "endry_clientes"
+    }
+  }
+}

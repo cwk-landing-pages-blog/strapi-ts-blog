@@ -1,0 +1,37 @@
+{
+  "collectionName": "components_business_endry_items",
+  "info": {
+    "displayName": "endry-item"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "quantity": {
+      "type": "decimal"
+    },
+    "info": {
+      "type": "string"
+    },
+    "isDiscount": {
+      "type": "boolean",
+      "default": false,
+      "required": false
+    },
+    "price": {
+      "type": "decimal"
+    },
+    "discounted_price": {
+      "type": "decimal"
+    },
+    "unit": {
+      "type": "enumeration",
+      "enum": [
+        "mq",
+        "pz",
+        "mc"
+      ]
+    }
+  }
+}
