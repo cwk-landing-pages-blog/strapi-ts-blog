@@ -4,7 +4,8 @@
   "info": {
     "singularName": "preventiv-item",
     "pluralName": "preventiv-items",
-    "displayName": "preventiv-item"
+    "displayName": "preventiv-item",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -24,7 +25,9 @@
       "type": "decimal"
     },
     "isDiscounted": {
-      "type": "boolean"
+      "type": "boolean",
+      "default": false,
+      "required": true
     },
     "quantity": {
       "type": "decimal"

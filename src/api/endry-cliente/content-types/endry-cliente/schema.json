@@ -35,6 +35,9 @@
       "relation": "manyToMany",
       "target": "api::preventiv.preventiv",
       "inversedBy": "endry_clientes"
+    },
+    "company": {
+      "type": "string"
     }
   }
 }
